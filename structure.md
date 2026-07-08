@@ -2,6 +2,7 @@ Backend:
     Python 3.14
     FastAPI
     PostgreSQL
+    SLQAlchemy
 
 Frontend:
     React + Vite
