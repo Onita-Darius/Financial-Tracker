@@ -1,4 +1,4 @@
 
 class EmailAlreadyExists(Exception):
-    def __init__(self, email: str):
-        super().__init__(f"Email '{email}' is already registered.")
+    def __init__(self):
+        super().__init__(f"Email is already registered.")

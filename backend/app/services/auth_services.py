@@ -17,7 +17,7 @@ class AuthService:
             existing_user = self.user_repo.get_by_email(user_data.email)
 
             if existing_user:
-                raise EmailAlreadyExists(user_data.email)
+                raise EmailAlreadyExists()
             
             hashed_password = hash_password(user_data.password)
 

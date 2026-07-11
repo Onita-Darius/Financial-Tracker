@@ -1,11 +1,13 @@
 from fastapi import FastAPI
-from app.core.config import settings
 from sqlalchemy import text
 from app.database.session import engine
 
+from app.api.auth import router as auth_router
 
 app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"message" : settings.database_url}
+    return {"message" : "test"}
+
+app.include_router(auth_router)
