@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from app.models.user import User
-
+from app.schemas.user import LoginRequest
 
 class UserRepo:
     def __init__(self, db: Session):

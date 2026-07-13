@@ -3,6 +3,7 @@ Backend:
     FastAPI
     PostgreSQL
     SLQAlchemy
+    pydantic
 
 Frontend:
     React + Vite
@@ -39,8 +40,8 @@ DB Tables:
         id, account_id, category_id, amount, type, description, date, created_at, updated_at
 
 API ENDPOINTS:
-    POST /register
-    POST /login
+    POST /auth/register
+    POST /auth/login
     GET /me 
     GET /accounts
     POST /accounts
