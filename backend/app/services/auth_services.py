@@ -15,7 +15,6 @@ class AuthService:
         
         try:
             existing_user = self.user_repo.get_by_email(user_data.email)
-            print(existing_user)
 
             if existing_user:
                 raise EmailAlreadyExists()
@@ -41,7 +40,6 @@ class AuthService:
         
         user = self.user_repo.get_by_email(login_data.email)
         
-        print(f"USER RESULT: {user}, {user.email}, {user.password_hash}")
         if user is None:
             raise InvalidUser()
         
